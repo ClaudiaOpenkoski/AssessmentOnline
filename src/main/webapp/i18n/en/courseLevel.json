@@ -1,0 +1,10 @@
+{
+    "testFrontendApp": {
+        "CourseLevel" : {
+            "null": "",
+            "Basic": "Basic",
+            "Intermediate": "Intermediate",
+            "Advanced": "Advanced"
+        }
+    }
+}

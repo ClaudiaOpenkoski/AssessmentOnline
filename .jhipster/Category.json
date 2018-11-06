@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "30"
+        }
+    ],
+    "changelogDate": "20181016083508",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "category",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "SchoolAssessment",
+    "searchEngine": false
+}

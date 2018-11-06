@@ -1,0 +1,27 @@
+{
+    "testFrontendApp": {
+        "topic" : {
+            "home": {
+                "title": "Topics",
+                "createLabel": "Criar um(a) novo(a) Topic",
+                "createOrEditLabel": "Criar ou editar um(a) Topic"
+            },
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Topic {{ id }}?"
+            },
+            "detail": {
+                "title": "Topic"
+            },
+            "duration": "Duration",
+            "name": "Name",
+            "module": "Module"
+        }
+    },
+    "schoolAssessmentApp": {
+        "topic" : {
+            "created": "A new Topic is created with identifier {{ param }}",
+            "updated": "A Topic is updated with identifier {{ param }}",
+            "deleted": "A Topic is deleted with identifier {{ param }}"
+        }
+    }
+}

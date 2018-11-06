@@ -1,0 +1,27 @@
+{
+    "testFrontendApp": {
+        "module" : {
+            "home": {
+                "title": "Modules",
+                "createLabel": "Create a new Module",
+                "createOrEditLabel": "Create or edit a Module"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Module {{ id }}?"
+            },
+            "detail": {
+                "title": "Module"
+            },
+            "description": "Description",
+            "name": "Name",
+            "course": "Course"
+        }
+    },
+    "schoolAssessmentApp": {
+        "module" : {
+            "created": "A new Module is created with identifier {{ param }}",
+            "updated": "A Module is updated with identifier {{ param }}",
+            "deleted": "A Module is deleted with identifier {{ param }}"
+        }
+    }
+}

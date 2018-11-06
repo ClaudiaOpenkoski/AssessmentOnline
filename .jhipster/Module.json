@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "256"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        }
+    ],
+    "changelogDate": "20181020025549",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "module",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "SchoolAssessment",
+    "searchEngine": false
+}

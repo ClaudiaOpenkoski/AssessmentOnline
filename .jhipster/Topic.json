@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "module",
+            "otherEntityName": "module",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "duration",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "5"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        }
+    ],
+    "changelogDate": "20181020030357",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "topic",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "SchoolAssessment",
+    "searchEngine": false
+}
