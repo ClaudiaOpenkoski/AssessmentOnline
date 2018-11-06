@@ -1,11 +1,17 @@
 version: '2'
 services:
+<<<<<<< HEAD
     testfrontend-app:
         image: testfrontend
+=======
+    schoolassessment-app:
+        image: schoolassessment
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
             - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
             - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
+<<<<<<< HEAD
             - SPRING_DATASOURCE_URL=jdbc:mysql://testfrontend-mysql:3306/testfrontend?useUnicode=true&characterEncoding=utf8&useSSL=false
             - JHIPSTER_SLEEP=30 # gives time for the JHipster Registry to boot before the application
         ports:
@@ -14,6 +20,14 @@ services:
         extends:
             file: mysql.yml
             service: testfrontend-mysql
+=======
+            - SPRING_DATASOURCE_URL=jdbc:mysql://schoolassessment-mysql:3306/schoolassessment?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=30 # gives time for the JHipster Registry to boot before the application
+    schoolassessment-mysql:
+        extends:
+            file: mysql.yml
+            service: schoolassessment-mysql
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     jhipster-registry:
         extends:
             file: jhipster-registry.yml

@@ -17,19 +17,32 @@ eureka:
     client:
         enabled: true
     instance:
+<<<<<<< HEAD
         appname: TestFrontend
         instanceId: TestFrontend:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
         name: TestFrontend
+=======
+        appname: SchoolAssessment
+        instanceId: SchoolAssessment:${spring.application.instance-id:${random.value}}
+
+spring:
+    application:
+        name: SchoolAssessment
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
+<<<<<<< HEAD
         url: jdbc:h2:mem:TestFrontend;DB_CLOSE_DELAY=-1
+=======
+        url: jdbc:h2:mem:SchoolAssessment;DB_CLOSE_DELAY=-1
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         name:
         username:
         password:
@@ -92,6 +105,7 @@ jhipster:
             host: localhost
             port: 5000
             queue-size: 512
+<<<<<<< HEAD
     mail:
         from: test@localhost
         base-url: http://127.0.0.1:8080
@@ -99,6 +113,12 @@ jhipster:
         authentication:
             jwt:
                 secret: f5fb5ed140bd1c859a9cb533ff95b22c1a81d6e7
+=======
+    security:
+        authentication:
+            jwt:
+                secret: dba8af57a400e80636b3dde825435612e6884182
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

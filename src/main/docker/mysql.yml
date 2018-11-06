@@ -1,5 +1,6 @@
 version: '2'
 services:
+<<<<<<< HEAD
     testfrontend-mysql:
         image: mysql:5.7.20
         # volumes:
@@ -8,6 +9,16 @@ services:
             - MYSQL_USER=root
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
             - MYSQL_DATABASE=testfrontend
+=======
+    schoolassessment-mysql:
+        image: mysql:5.7.20
+        # volumes:
+        #     - ~/volumes/jhipster/SchoolAssessment/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=schoolassessment
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         ports:
             - 3306:3306
         command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8 --explicit_defaults_for_timestamp

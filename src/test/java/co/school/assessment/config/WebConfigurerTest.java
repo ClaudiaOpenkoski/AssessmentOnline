@@ -3,6 +3,7 @@ package co.school.assessment.config;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
+<<<<<<< HEAD
 import com.hazelcast.config.Config;
 import com.hazelcast.core.*;
 import com.hazelcast.durableexecutor.DurableExecutorService;
@@ -14,6 +15,10 @@ import com.hazelcast.transaction.*;
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
 import io.github.jhipster.web.filter.CachingHttpHeadersFilter;
+=======
+import io.github.jhipster.config.JHipsterConstants;
+import io.github.jhipster.config.JHipsterProperties;
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 import io.undertow.Undertow;
 import io.undertow.Undertow.Builder;
 import io.undertow.UndertowOptions;
@@ -31,7 +36,10 @@ import org.xnio.OptionMap;
 
 import javax.servlet.*;
 import java.util.*;
+<<<<<<< HEAD
 import java.util.concurrent.ConcurrentMap;
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -71,7 +79,11 @@ public class WebConfigurerTest {
         env = new MockEnvironment();
         props = new JHipsterProperties();
 
+<<<<<<< HEAD
         webConfigurer = new WebConfigurer(env, props, new MockHazelcastInstance());
+=======
+        webConfigurer = new WebConfigurer(env, props);
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         metricRegistry = new MetricRegistry();
         webConfigurer.setMetricRegistry(metricRegistry);
     }
@@ -85,7 +97,10 @@ public class WebConfigurerTest {
         assertThat(servletContext.getAttribute(MetricsServlet.METRICS_REGISTRY)).isEqualTo(metricRegistry);
         verify(servletContext).addFilter(eq("webappMetricsFilter"), any(InstrumentedFilter.class));
         verify(servletContext).addServlet(eq("metricsServlet"), any(MetricsServlet.class));
+<<<<<<< HEAD
         verify(servletContext).addFilter(eq("cachingHttpHeadersFilter"), any(CachingHttpHeadersFilter.class));
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     }
 
     @Test
@@ -97,7 +112,10 @@ public class WebConfigurerTest {
         assertThat(servletContext.getAttribute(MetricsServlet.METRICS_REGISTRY)).isEqualTo(metricRegistry);
         verify(servletContext).addFilter(eq("webappMetricsFilter"), any(InstrumentedFilter.class));
         verify(servletContext).addServlet(eq("metricsServlet"), any(MetricsServlet.class));
+<<<<<<< HEAD
         verify(servletContext, never()).addFilter(eq("cachingHttpHeadersFilter"), any(CachingHttpHeadersFilter.class));
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     }
 
     @Test
@@ -108,9 +126,12 @@ public class WebConfigurerTest {
         assertThat(container.getMimeMappings().get("abs")).isEqualTo("audio/x-mpeg");
         assertThat(container.getMimeMappings().get("html")).isEqualTo("text/html;charset=utf-8");
         assertThat(container.getMimeMappings().get("json")).isEqualTo("text/html;charset=utf-8");
+<<<<<<< HEAD
         if (container.getDocumentRoot() != null) {
             assertThat(container.getDocumentRoot().getPath()).isEqualTo(FilenameUtils.separatorsToSystem("target/www"));
         }
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
         Builder builder = Undertow.builder();
         container.getBuilderCustomizers().forEach(c -> c.customize(builder));
@@ -339,6 +360,7 @@ public class WebConfigurerTest {
         }
     }
 
+<<<<<<< HEAD
     public static class MockHazelcastInstance implements HazelcastInstance {
 
         @Override
@@ -537,4 +559,6 @@ public class WebConfigurerTest {
         }
     }
 
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 }

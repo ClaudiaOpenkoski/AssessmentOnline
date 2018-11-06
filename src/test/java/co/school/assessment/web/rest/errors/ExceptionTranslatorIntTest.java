@@ -1,6 +1,10 @@
 package co.school.assessment.web.rest.errors;
 
+<<<<<<< HEAD
 import co.school.assessment.TestFrontendApp;
+=======
+import co.school.assessment.SchoolAssessmentApp;
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +29,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
+<<<<<<< HEAD
 @SpringBootTest(classes = TestFrontendApp.class)
+=======
+@SpringBootTest(classes = SchoolAssessmentApp.class)
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 public class ExceptionTranslatorIntTest {
 
     @Autowired

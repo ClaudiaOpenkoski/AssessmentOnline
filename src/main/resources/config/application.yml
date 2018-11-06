@@ -24,8 +24,13 @@ eureka:
         instance-info-replication-interval-seconds: 10
         registry-fetch-interval-seconds: 10
     instance:
+<<<<<<< HEAD
         appname: TestFrontend
         instanceId: TestFrontend:${spring.application.instance-id:${random.value}}
+=======
+        appname: SchoolAssessment
+        instanceId: SchoolAssessment:${spring.application.instance-id:${random.value}}
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         lease-renewal-interval-in-seconds: 5
         lease-expiration-duration-in-seconds: 10
         status-page-url-path: ${management.context-path}/info
@@ -37,6 +42,7 @@ eureka:
 ribbon:
     eureka:
         enabled: true
+<<<<<<< HEAD
 # See http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
 zuul: # those values must be configured depending on the application specific needs
     host:
@@ -53,6 +59,16 @@ hystrix:
                 isolation:
                     thread:
                         timeoutInMilliseconds: 10000
+=======
+# See https://github.com/Netflix/Hystrix/wiki/Configuration
+#hystrix:
+#    command:
+#        default:
+#            execution:
+#                isolation:
+#                    thread:
+#                        timeoutInMilliseconds: 10000
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 management:
     security:
@@ -63,7 +79,11 @@ management:
             enabled: false # When using the MailService, configure an SMTP server and set this to true
 spring:
     application:
+<<<<<<< HEAD
         name: TestFrontend
+=======
+        name: SchoolAssessment
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     jackson:
         serialization.write_dates_as_timestamps: false
     jpa:
@@ -113,11 +133,19 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
+<<<<<<< HEAD
         from: TestFrontend@localhost
     swagger:
         default-include-pattern: /api/.*
         title: TestFrontend API
         description: TestFrontend API documentation
+=======
+        from: SchoolAssessment@localhost
+    swagger:
+        default-include-pattern: /api/.*
+        title: SchoolAssessment API
+        description: SchoolAssessment API documentation
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         version: 0.0.1
         terms-of-service-url:
         contact-name:

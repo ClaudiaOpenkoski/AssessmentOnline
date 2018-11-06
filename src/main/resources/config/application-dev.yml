@@ -33,9 +33,15 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
+<<<<<<< HEAD
         url: jdbc:mysql://localhost:3306/TestFrontend?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password: qwe123
+=======
+        url: jdbc:mysql://localhost:3306/SchoolAssessment?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password:
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         hikari:
             data-source-properties:
                 cachePrepStmts: true
@@ -51,10 +57,14 @@ spring:
             hibernate.cache.use_second_level_cache: true
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
+<<<<<<< HEAD
             hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
             hibernate.cache.hazelcast.instance_name: TestFrontend
             hibernate.cache.use_minimal_puts: true
             hibernate.cache.hazelcast.use_lite_member: true
+=======
+            hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.NoDefaultJCacheRegionFactory
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     mail:
         host: localhost
         port: 25
@@ -76,7 +86,11 @@ liquibase:
 
 # ===================================================================
 # To enable SSL, generate a certificate using:
+<<<<<<< HEAD
 # keytool -genkey -alias TestFrontend -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+=======
+# keytool -genkey -alias SchoolAssessment -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
@@ -89,10 +103,17 @@ liquibase:
 #        key-store: keystore.p12
 #        key-store-password: <your-password>
 #        keyStoreType: PKCS12
+<<<<<<< HEAD
 #        keyAlias: TestFrontend
 # ===================================================================
 server:
     port: 8088
+=======
+#        keyAlias: SchoolAssessment
+# ===================================================================
+server:
+    port: 8081
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 # ===================================================================
 # JHipster specific properties
@@ -101,6 +122,7 @@ server:
 # ===================================================================
 
 jhipster:
+<<<<<<< HEAD
     gateway:
         rate-limiting:
             enabled: false
@@ -122,6 +144,23 @@ jhipster:
         exposed-headers: "Authorization"
         allow-credentials: true
         max-age: 1800
+=======
+    http:
+        version: V_1_1 # To use HTTP/2 you will need SSL support (see above the "server.ssl" configuration)
+    cache: # Cache configuration
+        ehcache: # Ehcache configuration
+            time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
+            max-entries: 100 # Number of objects in each cache entry
+    # CORS is disabled by default on microservices, as you should access them through a gateway.
+    # If you want to enable it, please uncomment the configuration below.
+    # cors:
+        # allowed-origins: "*"
+        # allowed-methods: "*"
+        # allowed-headers: "*"
+        # exposed-headers: "Authorization"
+        # allow-credentials: true
+        # max-age: 1800
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     security:
         authentication:
             jwt:
@@ -130,15 +169,24 @@ jhipster:
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
+<<<<<<< HEAD
         from: TestFrontend@localhost
         base-url: http://127.0.0.1:8088
+=======
+        from: SchoolAssessment@localhost
+        base-url: http://127.0.0.1:8081
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         graphite: # Use the "graphite" Maven profile to have the Graphite dependencies
             enabled: false
             host: localhost
             port: 2003
+<<<<<<< HEAD
             prefix: TestFrontend
+=======
+            prefix: SchoolAssessment
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         prometheus: # Use the "prometheus" Maven profile to have the Prometheus dependencies
             enabled: false
             endpoint: /prometheusMetrics

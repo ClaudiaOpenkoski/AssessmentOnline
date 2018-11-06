@@ -1,12 +1,19 @@
 {
+<<<<<<< HEAD
   "name": "test-frontend",
   "version": "0.0.0",
   "description": "Description for TestFrontend",
+=======
+  "name": "school-assessment",
+  "version": "0.0.0",
+  "description": "Description for SchoolAssessment",
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
     "node_modules"
   ],
+<<<<<<< HEAD
   "dependencies": {
     "@angular/common": "4.3.2",
     "@angular/compiler": "4.3.2",
@@ -104,5 +111,12 @@
     "webpack:test": "yarn run test",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
+=======
+  "devDependencies": {
+    "generator-jhipster": "4.10.2"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
   }
 }

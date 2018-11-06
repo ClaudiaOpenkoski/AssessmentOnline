@@ -1,5 +1,6 @@
 package co.school.assessment.config;
 
+<<<<<<< HEAD
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
 
@@ -18,14 +19,31 @@ import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 
 import org.springframework.cache.CacheManager;
+=======
+import io.github.jhipster.config.JHipsterProperties;
+import org.ehcache.config.builders.CacheConfigurationBuilder;
+import org.ehcache.config.builders.ResourcePoolsBuilder;
+import org.ehcache.expiry.Duration;
+import org.ehcache.expiry.Expirations;
+import org.ehcache.jsr107.Eh107Configuration;
+
+import java.util.concurrent.TimeUnit;
+
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.context.annotation.*;
+<<<<<<< HEAD
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PreDestroy;
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 @Configuration
 @EnableCaching
@@ -33,6 +51,7 @@ import javax.annotation.PreDestroy;
 @AutoConfigureBefore(value = { WebConfigurer.class, DatabaseConfiguration.class })
 public class CacheConfiguration {
 
+<<<<<<< HEAD
     private final Logger log = LoggerFactory.getLogger(CacheConfiguration.class);
 
     private final Environment env;
@@ -146,5 +165,25 @@ public class CacheConfiguration {
         MapConfig mapConfig = new MapConfig();
         mapConfig.setTimeToLiveSeconds(jHipsterProperties.getCache().getHazelcast().getTimeToLiveSeconds());
         return mapConfig;
+=======
+    private final javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration;
+
+    public CacheConfiguration(JHipsterProperties jHipsterProperties) {
+        JHipsterProperties.Cache.Ehcache ehcache =
+            jHipsterProperties.getCache().getEhcache();
+
+        jcacheConfiguration = Eh107Configuration.fromEhcacheCacheConfiguration(
+            CacheConfigurationBuilder.newCacheConfigurationBuilder(Object.class, Object.class,
+                ResourcePoolsBuilder.heap(ehcache.getMaxEntries()))
+                .withExpiry(Expirations.timeToLiveExpiration(Duration.of(ehcache.getTimeToLiveSeconds(), TimeUnit.SECONDS)))
+                .build());
+    }
+
+    @Bean
+    public JCacheManagerCustomizer cacheManagerCustomizer() {
+        return cm -> {
+            // jhipster-needle-ehcache-add-entry
+        };
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     }
 }

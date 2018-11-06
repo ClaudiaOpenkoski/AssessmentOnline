@@ -1,6 +1,10 @@
 package co.school.assessment.web.rest;
 
+<<<<<<< HEAD
 import co.school.assessment.TestFrontendApp;
+=======
+import co.school.assessment.SchoolAssessmentApp;
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 import co.school.assessment.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -27,7 +31,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
+<<<<<<< HEAD
 @SpringBootTest(classes = TestFrontendApp.class)
+=======
+@SpringBootTest(classes = SchoolAssessmentApp.class)
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

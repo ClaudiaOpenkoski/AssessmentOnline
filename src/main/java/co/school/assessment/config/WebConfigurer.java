@@ -2,12 +2,18 @@ package co.school.assessment.config;
 
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
+<<<<<<< HEAD
 import io.github.jhipster.web.filter.CachingHttpHeadersFilter;
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
+<<<<<<< HEAD
 import com.hazelcast.core.HazelcastInstance;
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,8 +29,11 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.nio.file.Paths;
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 import java.util.*;
 import javax.servlet.*;
 
@@ -40,6 +49,7 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
 
     private final JHipsterProperties jHipsterProperties;
 
+<<<<<<< HEAD
     private final HazelcastInstance hazelcastInstance;
 
     private MetricRegistry metricRegistry;
@@ -49,6 +59,14 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         this.env = env;
         this.jHipsterProperties = jHipsterProperties;
         this.hazelcastInstance = hazelcastInstance;
+=======
+    private MetricRegistry metricRegistry;
+
+    public WebConfigurer(Environment env, JHipsterProperties jHipsterProperties) {
+
+        this.env = env;
+        this.jHipsterProperties = jHipsterProperties;
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     }
 
     @Override
@@ -58,9 +76,12 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         }
         EnumSet<DispatcherType> disps = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.ASYNC);
         initMetrics(servletContext, disps);
+<<<<<<< HEAD
         if (env.acceptsProfiles(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
             initCachingHttpHeadersFilter(servletContext, disps);
         }
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         log.info("Web application fully configured");
     }
 
@@ -75,8 +96,11 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         // CloudFoundry issue, see https://github.com/cloudfoundry/gorouter/issues/64
         mappings.add("json", "text/html;charset=utf-8");
         container.setMimeMappings(mappings);
+<<<<<<< HEAD
         // When running in an IDE or with ./mvnw spring-boot:run, set location of the static web assets.
         setLocationForStaticAssets(container);
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
         /*
          * Enable HTTP/2 for Undertow - https://twitter.com/ankinson/status/829256167700492288
@@ -93,6 +117,7 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         }
     }
 
+<<<<<<< HEAD
     private void setLocationForStaticAssets(ConfigurableEmbeddedServletContainer container) {
         File root;
         String prefixPath = resolvePathPrefix();
@@ -131,6 +156,8 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         cachingHttpHeadersFilter.setAsyncSupported(true);
     }
 
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     /**
      * Initializes Metrics.
      */
@@ -165,7 +192,10 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
             log.debug("Registering CORS filter");
             source.registerCorsConfiguration("/api/**", config);
             source.registerCorsConfiguration("/v2/api-docs", config);
+<<<<<<< HEAD
             source.registerCorsConfiguration("/*/api/**", config);
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         }
         return new CorsFilter(source);
     }

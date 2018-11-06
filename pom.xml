@@ -10,24 +10,37 @@
     </parent>
 
     <groupId>co.school.assessment</groupId>
+<<<<<<< HEAD
     <artifactId>test-frontend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Test Frontend</name>
+=======
+    <artifactId>school-assessment</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>School Assessment</name>
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
 
     <properties>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
         <assertj.version>3.6.2</assertj.version>
         <awaitility.version>2.0.0</awaitility.version>
+<<<<<<< HEAD
         <bucket4j.version>3.0.1</bucket4j.version>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         <commons-io.version>2.5</commons-io.version>
         <commons-lang.version>3.5</commons-lang.version>
         <cucumber.version>1.2.4</cucumber.version>
         <dockerfile-maven-plugin.version>1.3.4</dockerfile-maven-plugin.version>
         <!-- Overridden to get metrics-jcache -->
         <dropwizard-metrics.version>3.2.2</dropwizard-metrics.version>
+<<<<<<< HEAD
         <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
         <hazelcast-hibernate52.version>1.2</hazelcast-hibernate52.version>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
         <hibernate.version>5.2.10.Final</hibernate.version>
         <hikaricp.version>2.6.0</hikaricp.version>
         <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
@@ -128,6 +141,14 @@
         </dependency>
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>metrics-jcache</artifactId>
+            <version>${dropwizard-metrics.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
             <artifactId>metrics-jvm</artifactId>
             <version>${dropwizard-metrics.version}</version>
         </dependency>
@@ -166,6 +187,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast</artifactId>
         </dependency>
@@ -179,6 +201,8 @@
             <artifactId>hazelcast-spring</artifactId>
         </dependency>
         <dependency>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
             <version>${awaitility.version}</version>
@@ -245,6 +269,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-envers</artifactId>
         </dependency>
@@ -356,6 +392,7 @@
         <!-- Spring Cloud -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+<<<<<<< HEAD
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
         <dependency>
@@ -370,6 +407,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
             <artifactId>spring-cloud-starter</artifactId>
         </dependency>
         <dependency>
@@ -632,8 +671,13 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
+<<<<<<< HEAD
                     <url>jdbc:mysql://localhost:3306/TestFrontend</url>
                     <defaultSchemaName>TestFrontend</defaultSchemaName>
+=======
+                    <url>jdbc:mysql://localhost:3306/SchoolAssessment</url>
+                    <defaultSchemaName>SchoolAssessment</defaultSchemaName>
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                     <username>root</username>
                     <password></password>
                     <referenceUrl>hibernate:spring:co.school.assessment.domain?dialect=org.hibernate.dialect.MySQL5InnoDBDialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
@@ -692,7 +736,11 @@
                 </executions>
                 -->
                 <configuration>
+<<<<<<< HEAD
                     <repository>testfrontend</repository>
+=======
+                    <repository>schoolassessment</repository>
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                     <tag>latest</tag>
                     <contextDirectory>${project.build.directory}</contextDirectory>
                 </configuration>
@@ -730,6 +778,7 @@
                                         <ignore/>
                                     </action>
                                 </pluginExecution>
+<<<<<<< HEAD
                                 <pluginExecution>
                                     <pluginExecutionFilter>
                                         <groupId>com.github.eirslett</groupId>
@@ -744,6 +793,8 @@
                                         <ignore/>
                                     </action>
                                 </pluginExecution>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
@@ -765,6 +816,7 @@
             </properties>
         </profile>
         <profile>
+<<<<<<< HEAD
             <id>webpack</id>
             <build>
                 <plugins>
@@ -799,6 +851,8 @@
             </build>
         </profile>
         <profile>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
             <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -820,6 +874,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-war-plugin</artifactId>
                         <configuration>
+<<<<<<< HEAD
                             <warSourceDirectory>target/www/</warSourceDirectory>
                             <webResources>
                                 <resource>
@@ -829,6 +884,8 @@
                                     </includes>
                                 </resource>
                             </webResources>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                         </configuration>
                     </plugin>
                 </plugins>
@@ -864,6 +921,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-war-plugin</artifactId>
                         <configuration>
+<<<<<<< HEAD
                             <warSourceDirectory>target/www/</warSourceDirectory>
                             <webResources>
                                 <resource>
@@ -873,6 +931,8 @@
                                     </includes>
                                 </resource>
                             </webResources>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                         </configuration>
                     </plugin>
                     <plugin>
@@ -889,6 +949,7 @@
                             </execution>
                         </executions>
                     </plugin>
+<<<<<<< HEAD
                     <plugin>
                         <groupId>com.github.eirslett</groupId>
                         <artifactId>frontend-maven-plugin</artifactId>
@@ -935,6 +996,8 @@
                             </execution>
                         </executions>
                     </plugin>
+=======
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
                 </plugins>
             </build>
             <properties>

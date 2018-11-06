@@ -16,6 +16,10 @@ public class ApplicationWebXml extends SpringBootServletInitializer {
          * set a default to use when no profile is configured.
          */
         DefaultProfileUtil.addDefaultProfile(application.application());
+<<<<<<< HEAD
         return application.sources(TestFrontendApp.class);
+=======
+        return application.sources(SchoolAssessmentApp.class);
+>>>>>>> ff9f744f1ab1888886ad4625cbfd4bb9430a8ddd
     }
 }
